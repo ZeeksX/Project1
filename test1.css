@@ -89,26 +89,23 @@ form label{
 .container input {
     display: block;
     width: 100%;
-    color: #d44f4f;
     padding: 1em;
     font-size: 1em;
     line-height: 1.5;
-    box-sizing: border-box;
     border-radius: 0.5rem;
     margin-bottom: 1.25rem;
     border: 1px solid #d4d4d4;
     cursor: pointer;
-}
-.container input:hover{
-    background-color: #ffe8e6;
-    border: 1px solid #fe8376;
-}
-.form .invalid-input {
-    border: 2px solid #fc908a;
-    color: #fe8376 ;
-    background: #d44f4f ; 
+    box-sizing: border-box;
 }
 
+.container .invalid-input:hover {
+    color: #fe8376;
+    background: #ffe8e6;
+}
+.container .invalid-input:hover{
+    border: 2px solid #fc908a;    
+}
 .container button {
     display: block;
     background-color: #232742;
@@ -256,10 +253,12 @@ button:hover {
 @media only screen and (min-width: 1024px){
     body{
         max-width: 47rem;
-        margin-top: 20rem;
+        margin-top: 6.9rem;
         
     }
     .message{
+        position: relative;
+        margin-top: 15rem;
         max-width: 15rem;
         transform: scale(1.5,1.5);
     }
