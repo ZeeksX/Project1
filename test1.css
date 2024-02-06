@@ -260,6 +260,5 @@ button:hover {
         position: relative;
         margin-top: 15rem;
         max-width: 15rem;
-        transform: scale(1.5,1.5);
     }
 }
