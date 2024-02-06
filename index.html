@@ -25,7 +25,7 @@
             </ul>
             <form id="signupForm">
                 <label for="email">Email address <span id="emailError" class="error-message"></span></label>
-                <input id="email" type="email" name="email" placeholder="email@company.com" required/>
+                <input id="email" type="text" name="email" placeholder="email@company.com"/>
                 <button type="submit">Subscribe to monthly newsletter</button>
             </form>
             </div>
@@ -39,8 +39,8 @@
                 <h1>Thanks for subscribing!</h1> 
                 <p>A confirmation email has been sent to <span id="half"></span>. Please open it and click the button inside to confirm your subscription.</p>
             </div>
-                <button type="submit" onclick="history.back()" >Dismiss message</button>
+                <button type="submit" onclick="location.reload()" >Dismiss message</button>
          </div>
-         <script src='test1.js'></script>
+         <script src="test1.js"></script>
     </body>
 </html>
