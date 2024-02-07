@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const emailInput = document.querySelector('#email');
     const emailError = document.getElementById("emailError");
     const successMessage = document.getElementById("successMessage");
-    const button = document.querySelector('.btn')
+    const button = document.getElementById('submit');
     
     // formula to check validity of email
     function isValidEmail(email) {
@@ -12,19 +12,23 @@ document.addEventListener('DOMContentLoaded', function(){
         return emailRegex.test(email);
     }
     //When the form submits
+    button.addEventListener('click', function(event){
+        if(isValidEmail(emailInput.value)){
+            emailInput.classList.remove('invalid-input');
+        } else {
+            emailInput.classList.add('invalid-input');
+            emailError.textContent = 'Valid email address required'; 
+        }
+    });
     signupForm.addEventListener('submit', function(event){
-        if(!isValidEmail(emailInput.value)){
+        if(isValidEmail(emailInput.value)){
+            emailError.textContent = '';
+            showSuccessMessage();
+            event.preventDefault();
+        } else {
             event.preventDefault();
             emailError.style.display='flex';
             emailError.textContent = 'Valid email address required';
-            emailInput.style.color='#fe8376';
-            emailInput.style.backgroundColor='#ffe8e6';
-            emailInput.classList.add('invalid-input'); 
-        } else {
-            emailError.textContent = '';
-            emailInput.classList.remove('invalid-input');
-            showSuccessMessage();
-            event.preventDefault();
         }
     });
     
