@@ -99,13 +99,12 @@ form label{
     box-sizing: border-box;
 }
 
-.container .invalid-input:hover {
+#signupForm .invalid-input {
     color: #fe8376;
     background: #ffe8e6;
+    border: 2px solid #fc908a;  
 }
-.container .invalid-input:hover{
-    border: 2px solid #fc908a;    
-}
+
 .container button {
     display: block;
     background-color: #232742;
@@ -166,7 +165,7 @@ button:hover {
 @media only screen and (min-width: 700px){
     body{
         background-color: #36384d;
-        margin: 10rem auto;
+        margin: 1rem auto;
     }
     .container{
         background-color: #fff;
@@ -253,12 +252,12 @@ button:hover {
 @media only screen and (min-width: 1024px){
     body{
         max-width: 47rem;
-        margin-top: 6.9rem;
+        margin: 2rem auto;
         
     }
     .message{
-        position: relative;
-        margin-top: 15rem;
+        margin: 6rem auto;
         max-width: 15rem;
+        transform: scale(1.1, 1.1);
     }
 }
